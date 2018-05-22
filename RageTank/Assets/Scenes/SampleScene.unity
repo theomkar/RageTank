@@ -251,10 +251,14 @@ Transform:
 =======
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 337, y: -15, z: -236}
 =======
   m_LocalPosition: {x: 0, y: 1, z: -10}
 >>>>>>> e466d447e30c9d17e0b19ba3281c247523b0f7e4
+=======
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+>>>>>>> parent of e4e0207... 1st commut
   m_LocalScale: {x: 1, y: 1, z: 1}
 >>>>>>> e4e0207620b777786ea3adbb022641c21a48e0dd
   m_Children: []
@@ -296,10 +300,14 @@ Prefab:
     - target: {fileID: 4364496552398712, guid: a8d01b64f1884514a8dbc5f578ae865c, type: 2}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 285.1
 =======
       value: 0.37
 >>>>>>> e466d447e30c9d17e0b19ba3281c247523b0f7e4
+=======
+      value: 0.37
+>>>>>>> parent of e4e0207... 1st commut
       objectReference: {fileID: 0}
     - target: {fileID: 4364496552398712, guid: a8d01b64f1884514a8dbc5f578ae865c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -334,6 +342,7 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 28.24
       objectReference: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
     - target: {fileID: 4184854073394384, guid: a8d01b64f1884514a8dbc5f578ae865c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -372,6 +381,8 @@ Prefab:
 =======
 >>>>>>> parent of e4e0207... 1st commut
 >>>>>>> e466d447e30c9d17e0b19ba3281c247523b0f7e4
+=======
+>>>>>>> parent of e4e0207... 1st commut
     m_RemovedComponents: []
 >>>>>>> e4e0207620b777786ea3adbb022641c21a48e0dd
   m_ParentPrefab: {fileID: 100100000, guid: a8d01b64f1884514a8dbc5f578ae865c, type: 2}
@@ -386,10 +397,14 @@ Prefab:
     - target: {fileID: 4785731917780608, guid: 3d3bdef822c58bd49b7e4dd6f564af1e, type: 2}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 316.8
 =======
       value: 0
 >>>>>>> e466d447e30c9d17e0b19ba3281c247523b0f7e4
+=======
+      value: 0
+>>>>>>> parent of e4e0207... 1st commut
       objectReference: {fileID: 0}
     - target: {fileID: 4785731917780608, guid: 3d3bdef822c58bd49b7e4dd6f564af1e, type: 2}
       propertyPath: m_LocalPosition.y
