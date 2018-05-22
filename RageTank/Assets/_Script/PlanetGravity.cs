@@ -5,6 +5,12 @@ using UnityEngine;
 public class PlanetGravity : MonoBehaviour {
 
 	// Use this for initialization
+
+    public void GravityPlanet()
+    {
+
+    }
+
 	void Start () {
 		
 	}
