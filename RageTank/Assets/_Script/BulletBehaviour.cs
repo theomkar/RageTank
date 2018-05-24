@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour {
 
-    public GameObject player;
-    public GameObject bullet;
-
     public float firerate = 10.0f;
     public int bullet_count ;
     public float damage = 10.0f;
+
+    public GameObject player;
+    public GameObject bullet;
 
     public List<GameObject> bullets;
    
@@ -17,15 +17,17 @@ public class BulletBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        player = GameObject.FindGameObjectWithTag("Player");
-        bullet = player.transform.GetChild(2).gameObject;
+       // player = GameObject.FindGameObjectWithTag("Player");
+      //  bullet = player.transform.GetChild(2).gameObject;
 
-        //for(int i = 0; i < bullet_count; ++i )
+        //bullets = new List<GameObject>();
+        //for (int i = 0; i < bullet_count; ++i)
         //{
-        //    bullets = new List<GameObject>();
+            
+            
         //}
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,15 +36,17 @@ public class BulletBehaviour : MonoBehaviour {
             //shoot();
             // damage -= 10.0f;
             
-            transform.Translate(0, 100 * Time.deltaTime, 0);
+           
+            InvokeRepeating("Shoot", 0.2f, 0.2f);
         }
 
 	}
 
 
-    void shoot()
+    void Shoot()
     {
-
+        transform.Translate(0, 100 * Time.deltaTime, 0);
+        
     }
 
 }
