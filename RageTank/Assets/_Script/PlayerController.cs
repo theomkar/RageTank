@@ -10,11 +10,12 @@ public class PlayerController : MonoBehaviour {
     Rigidbody m_rigidbody;
 
     Transform m_transform;
+    public GameObject bulletprefab;
 
     private void Start()
     {
         m_rigidbody = GetComponent<Rigidbody>();
-        
+        bulletprefab = Resources.Load("Bullets") as GameObject;
     }
 
     // Update is called once per frame
@@ -33,6 +34,18 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("a pressed");
             this.transform.Rotate(0, Time.deltaTime + turnRate, 0, Space.World);
         }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            CreateBullet();
+        }
+
+    }
+
+    void CreateBullet()
+    {
+        Instantiate(bulletprefab,gameObject.transform.position,Quaternion.identity);
+        
     }
 
     private void FixedUpdate()

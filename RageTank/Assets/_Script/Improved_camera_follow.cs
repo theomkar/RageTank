@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
  public class Improved_camera_follow : MonoBehaviour
@@ -12,7 +11,7 @@ using System.Collections;
     public bool followBehind = true;
     public float rotationDamping = 10.0f;
 
-    void LateUpdate()
+    void Update()
     {
         Vector3 wantedPosition;
         if (followBehind)

@@ -7,46 +7,51 @@ public class BulletBehaviour : MonoBehaviour {
     public float firerate = 10.0f;
     public int bullet_count ;
     public float damage = 10.0f;
+    public float speed = 10f;
+    bool start = false;
+
+    //public List<GameObject> bullets;
 
     public GameObject player;
-    public GameObject bullet;
-
-    public List<GameObject> bullets;
+    //public GameObject bulletprefab;
+    Rigidbody rb;
    
 
 	// Use this for initialization
 	void Start () {
-
-       // player = GameObject.FindGameObjectWithTag("Player");
-      //  bullet = player.transform.GetChild(2).gameObject;
-
-        //bullets = new List<GameObject>();
-        //for (int i = 0; i < bullet_count; ++i)
-        //{
-            
-            
-        //}
-
+        rb = GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player");
+       
+       // rb.transform.position = player.transform.position;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Space))
-        {
-            //shoot();
-            // damage -= 10.0f;
-            
-           
-            InvokeRepeating("Shoot", 0.2f, 0.2f);
-        }
-
-	}
+        Shoot();
+        
+    }
 
 
     void Shoot()
     {
-        transform.Translate(0, 100 * Time.deltaTime, 0);
+
+        transform.position += transform.forward * speed * Time.deltaTime;
         
+        transform.parent = null;
+        StartCoroutine("DestroyBullet");
+        
+
     }
+
+    
+
+
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Destroy(gameObject);
+    }
+
+   
 
 }
