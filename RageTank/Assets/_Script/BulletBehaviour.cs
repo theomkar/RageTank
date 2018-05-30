@@ -7,7 +7,7 @@ public class BulletBehaviour : MonoBehaviour {
     public float firerate = 10.0f;
     public int bullet_count ;
     public float damage = 10.0f;
-    public float speed = 10f;
+    public float speed = 100f;
     bool start = false;
 
     public GameObject player;
@@ -31,8 +31,10 @@ public class BulletBehaviour : MonoBehaviour {
 
     void Shoot()
     {
-        transform.position += transform.forward * speed * Time.deltaTime;   
-        transform.parent = null;
+        transform.position += player.transform.forward + transform.forward * speed * Time.deltaTime;
+        //rb.AddForce(player.transform.forward * speed * Time.deltaTime);
+
+
         StartCoroutine("DestroyBullet");
     }
 
@@ -41,7 +43,7 @@ public class BulletBehaviour : MonoBehaviour {
 
     IEnumerator DestroyBullet()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }
 
