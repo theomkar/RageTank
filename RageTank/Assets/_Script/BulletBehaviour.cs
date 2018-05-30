@@ -10,10 +10,7 @@ public class BulletBehaviour : MonoBehaviour {
     public float speed = 10f;
     bool start = false;
 
-    //public List<GameObject> bullets;
-
     public GameObject player;
-    //public GameObject bulletprefab;
     Rigidbody rb;
    
 
@@ -22,25 +19,21 @@ public class BulletBehaviour : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
        
+       //To set the position of this object i.e(Bullet) with player 
        // rb.transform.position = player.transform.position;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        Shoot();
-        
+        Shoot();  
     }
 
 
     void Shoot()
     {
-
-        transform.position += transform.forward * speed * Time.deltaTime;
-        
+        transform.position += transform.forward * speed * Time.deltaTime;   
         transform.parent = null;
         StartCoroutine("DestroyBullet");
-        
-
     }
 
     

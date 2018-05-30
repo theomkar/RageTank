@@ -115,7 +115,7 @@ MonoBehaviour:
   firerate: 10
   bullet_count: 0
   damage: 10
-  speed: 25
+  speed: 28.23
   player: {fileID: 0}
 --- !u!136 &136162740986541658
 CapsuleCollider:

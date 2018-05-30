@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float movementSpeed = 20.0f;
-    public float turnRate = 5.0f;
+    public float turnRate = 15.0f;
     private Vector3 moveDir;
     Rigidbody m_rigidbody;
 
@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour {
     void CreateBullet()
     {
         Instantiate(bulletprefab,gameObject.transform.position,Quaternion.identity);
-        
     }
 
     private void FixedUpdate()
